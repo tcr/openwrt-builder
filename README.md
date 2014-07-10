@@ -33,3 +33,8 @@ config 'interface' 'wan'
 * Combine Vagrantfile into Rakefile
 * Use Veewee to output a Vagrant image of OpenWrt itself.
 * Provisioning for OpenWrt packages.
+
+## Links
+
+* http://wiki.openwrt.org/doc/howto/virtualbox
+* `Kernel driver not installed (rc=-1908)` on OSX https://github.com/mitchellh/vagrant/issues/1671

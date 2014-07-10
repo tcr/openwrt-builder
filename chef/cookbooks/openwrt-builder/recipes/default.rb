@@ -35,7 +35,7 @@ link "/home/vagrant/openwrt" do
   to dir
 end
 
-execute "git clone http://git.mirror.nanl.de/openwrt/trunk.git ." do
+execute "git clone http://git.mirror.nanl.de/openwrt.git ." do
   action :run
   user "vagrant"
   group "vagrant"
@@ -70,7 +70,7 @@ template "#{dir}/.config" do
   })
 end
 
-execute "make -j `awk \"/^processor/ {++n} END {print n}\" /proc/cpuinfo `" do
+execute "make defconfig && make -j `awk \"/^processor/ {++n} END {print n}\" /proc/cpuinfo ` V=99" do
   action :run
   user "vagrant"
   group "vagrant"
